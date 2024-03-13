@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quote generator</title>
+    <style>
+        body{
+            background-color: rgba(125, 107, 107, 0.586);
+        }
+        .container{
+            text-align: center;
+            background-color: rgba(53, 19, 102, 0.487);
+            height:275px;
+            width: 750px;
+            border:5px solid rgba(70, 31, 70, 0.36);
+            margin: 0 auto;
+        }
+        #btn{
+            margin:50px auto;
+            width:250px;
+            height:50px;
+            font-size:22px;
+            background-color:white;
+        }
+        #output{
+            margin:25px auto;
+            font-size:26px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="btn">click for a new quote</button>
+        <div id="output">click the button to generate a quote</div>
+    </div>
+    <script>
+        var btn=document.getElementById("btn");
+        var output=document.getElementById("output");
+        var quotes=['“Success is not final, failure is not fatal: it is the courage to continue that counts.” - Winston Churchill',
+                    '“If at first you dont succeed, try, try again. Then quit. No use being a damn fool about it.” - W.C. Fields',
+                    '“Fortune befriends the bold.” - Emily Dickinson',
+                    '“Success is survival.” - Leonard Cohen',
+                    '“Nothing is impossible, the word itself says ‘I’m possible’!” - Audrey Hepburn',
+                    '“Live as if you were to die tomorrow” - Mahatma Gandhi',
+                    '“The time is always right to do what is right” - Martin Luther King Jr.',
+                    '“Happiness depends upon ourselves.” - Aristotle',
+                    '“If you tell the truth, you don’t have to remember anything.” – Mark Twain',
+                    '“It is during our darkest moments that we must focus to see the light.” – Aristotle Onassis',
+                    '“What you do speaks so loudly that I cannot hear what you say.” – Ralph Waldo Emerson',
+                    '“Clouds come floating into my life, no longer to carry rain or usher storm, but to add color to my sunset sky.” – Rabindranath Tagore',
+                    '“I am not a product of my circumstances. I am a product of my decisions.” – Stephen Covey'
+    ];
+    btn.addEventListener("click",function(){
+        var random_quote=quotes[Math.floor(Math.random()*quotes.length)];
+        output.innerHTML=random_quote;
+    });
+
+    </script>
+</body>
+</html>
